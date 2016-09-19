@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ERP_BANK.Domain.Entities.AccountsBlocked>
+
+@{
+    ViewBag.Title = "ListAccountBlocked";
+}
+
+<h2>ListAccountBlocked</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FNameClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LNameClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CinClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Libelle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Currency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DirectionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateDeblocked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Blocked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Benefit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FNameClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LNameClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CinClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Libelle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Currency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DirectionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateDeblocked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Blocked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Benefit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

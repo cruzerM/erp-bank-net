@@ -1,0 +1,69 @@
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.xml
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.csprojResolveAssemblyReference.cache
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.xml
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.csprojResolveAssemblyReference.cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.xml
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.csprojResolveAssemblyReference.cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.xml
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.csprojResolveAssemblyReference.cache
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Service.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\EntityFramework.xml
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.csprojResolveAssemblyReference.cache
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Service\obj\Debug\ERP_BANK.Service.pdb

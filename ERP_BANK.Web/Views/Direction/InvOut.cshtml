@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ERP_BANK.Domain.Entities.invoice>
+
+@{
+    ViewBag.Title = "InvOut";
+}
+
+
+<style>
+    table {
+        height: 400px;
+        overflow-y: scroll;
+        display: block;
+    }
+</style>
+
+@if (Model != null)
+
+{  <div class="x_title">
+        <h1>List Invoices Out</h1>
+    </div>
+    <div class="x_content">
+
+        <table class="table table-striped responsive-utilities jambo_table">
+            <thead>
+                <tr class="headings">
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                    <th>
+                        Type
+                    </th>
+                    <th>
+                        Owner
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Direction
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdInvoice)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceOwner)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoicePrice)
+                            $
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PK_InvoiceDirection)
+                        </td>
+                    </tr>}
+            </tbody>
+        </table>
+    </div>
+
+}
+@if (Model == null)
+{
+    <hr />
+    <h2>No Invoices are available</h2>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

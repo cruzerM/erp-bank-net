@@ -1,0 +1,93 @@
+﻿@model IEnumerable<ERP_BANK.Domain.Entities.share>
+
+        @{
+        ViewBag.Title = "IndexShare";
+        }
+        <link type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+
+        <div class="x_title">
+            <h1>All Shares</h1>
+        </div>
+        <div class="x_content">
+
+            <table class="table table-striped responsive-utilities jambo_table">
+                <thead>
+                    <tr class="headings">
+                        <th>
+                            @Html.DisplayNameFor(model => model.currency1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.currency2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.amountInvested)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.dateOfPurchase)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.dateOfSale)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.gain)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.idBroker)
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.currency1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.currency2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.amountInvested)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dateOfPurchase)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dateOfSale)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.gain)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.broker.title)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Share" ,new { id=item.idshare })" class="btn btn-warning btn-xs">
+                                <i class="glyphicon glyphicon-plus"></i>
+                                Edit
+                            </a>
+                            <a href="@Url.Action("Delete", "Share" ,new { id=item.idshare })" class="btn btn-warning btn-xs" onclick="return confirm('Are you sure you want to delete this share?');">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </a>
+
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <span>
+            <a href="@Url.Action("Create", "Share" )" class="btn btn-success btn-sm" style="font-size:medium; margin-left:40%">
+                Add new share here
+            </a>
+        </span>
+
+

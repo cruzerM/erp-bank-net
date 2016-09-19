@@ -1,0 +1,171 @@
+﻿@model ERP_BANK.Web.Models.TransactionViewModel
+@{
+    ViewBag.Title = "ERP Bank";
+}
+
+
+<style>
+    table {
+        height: 400px;
+        overflow-y: scroll;
+        display: block;
+    }
+</style>
+
+
+
+<span>
+    <a href="@Url.Action("Index", "Transaction")" class="btn btn-success">
+        Back to transactions list
+    </a>
+</span>
+<div class="x_title">
+    <h1>Search transactions of an account</h1>
+    </div>
+    
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group">
+                <label class="control-label col-md-2">Account RIB</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AccountRIB, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                    @Html.ValidationMessageFor(model => model.AccountRIB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Start date</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.beginDate, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                    @Html.ValidationMessageFor(model => model.beginDate, "", new { @class = "text-danger", type = "date" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">End date</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.endDate, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                    @Html.ValidationMessageFor(model => model.endDate, "", new { @class = "text-danger", type = "date" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Search" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+    <hr />
+    @if (ViewBag.Transactions != null && ViewBag.RIB != null)
+    {
+
+   
+
+     <div class="x_title">
+            <h1>Account transactions</h1>
+        </div>
+        <div class="x_content">
+            <table class="table table-striped responsive-utilities jambo_table bulk_action">
+                <thead>
+                    <tr class="headings">
+                        <th class="column-title">
+                            Transaction ID
+                        </th>
+                        <th class="column-title">
+                            Account RIB
+                        </th>
+                        <th class="column-title">
+                            Reference RIB
+                        </th>
+                        <th class="column-title">
+                            Operation date
+                        </th>
+                        <th class="column-title">
+                            Value date
+                        </th>
+                        <th class="column-title">
+                            Credit (-)
+                        </th>
+                        <th class="column-title">
+                            Debit (+)
+                        </th>
+                        <th class="column-title">
+                            Transaction status
+                        </th>
+                        <th class="column-title">
+                            Transaction type
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.Transactions)
+                {
+                    if (ViewBag.RIB == @item.TransmitterRIB)
+                    {
+                            <tr class="odd pointer">
+                                <td class=" ">
+                                    @item.Id
+                                </td>
+                                <td class=" ">
+                                    @item.TransmitterRIB
+                                </td>
+                                <td class=" ">
+                                    @item.BeneficiaryRIB
+                                </td>
+                                <td class=" ">
+                                    @item.OperationDate
+                                </td>
+                                <td class=" ">
+                                    @item.ValueDate
+                                </td>
+                                <td class="a-right a-right">
+                                    @item.Amount
+                                </td>
+                                <td class=" "></td>
+                                <td class=" ">
+                                    @item.Status
+                                </td>
+                                <td class=" ">
+                                    @item.Type
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr class="odd pointer">
+                                <td class=" ">
+                                    @item.Id
+                                </td>
+                                <td class=" ">
+                                    @item.BeneficiaryRIB
+                                </td>
+                                <td class=" ">
+                                    @item.TransmitterRIB
+                                </td>
+                                <td class=" ">
+                                    @item.OperationDate
+                                </td>
+                                <td class=" ">
+                                    @item.ValueDate
+                                </td>
+                                <td class=" "></td>
+                                <td class="a-right a-right">@item.Amount</td>
+                                <td class=" ">
+                                    @item.Status
+                                </td>
+                                <td class=" ">
+                                    @item.Type
+                                </td>
+                            </tr>
+                        }
+                    }
+                <tbody>
+                    </table>
+        </div>
+    }
+            

@@ -1,0 +1,108 @@
+﻿@model ERP_BANK.Domain.Entities.loan
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<style>
+    .editor {
+        width: 200px;
+    }
+</style>
+
+<h1>New Loan</h1>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                @* @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control editor" } })*@
+                @{
+                    List<SelectListItem> listItems = new List<SelectListItem>();
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "Immobilier",
+                        Value = "Immobilier"
+                    });
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "Voiture",
+                        Value = "Voiture"
+                    });
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "Projet",
+                        Value = "Projet"
+                    });
+                }
+
+                @Html.DropDownListFor(model => model.Type, listItems, "-- Select Type --", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control editor" } })
+                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Period, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Period, new { htmlAttributes = new { @class = "form-control editor" } })
+                @Html.ValidationMessageFor(model => model.Period, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Warranty, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Warranty, new { htmlAttributes = new { @class = "form-control editor" } })
+                @Html.ValidationMessageFor(model => model.Warranty, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.InterestRate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.InterestRate, new { htmlAttributes = new { @class = "form-control editor" } })
+                @Html.ValidationMessageFor(model => model.InterestRate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdAccount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.account.Libelle, new { htmlAttributes = new { @class = "form-control editor" } })
+                @Html.ValidationMessageFor(model => model.account.Libelle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+                    }
+
+<span>
+    <a href="@Url.Action("Index", "Loan")" class="btn btn-danger btn-xs">
+        <i class="fa fa-arrow-circle-left"></i>
+        Back to List
+    </a>
+</span>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

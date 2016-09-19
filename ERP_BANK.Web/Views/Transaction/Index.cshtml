@@ -1,0 +1,127 @@
+﻿@model IEnumerable<ERP_BANK.Web.Models.TransactionViewModel>
+
+@{
+    ViewBag.Title = "ERP Bank";
+}
+
+
+
+
+<style>
+    table{
+        height: 400px;
+        overflow-y: scroll;
+        display: block;
+    }
+</style>
+
+<span>
+
+    <a href="@Url.Action("Create", "Transaction")" class="btn btn-success">
+        Create a new transaction
+
+    </a>
+</span>
+<span>
+    <a href="@Url.Action("Account", "Transaction")" class="btn btn-success">
+        Search an account transaction
+
+    </a>
+</span>
+@if (Model == null)
+{
+    <hr />
+    <h2>No transactions is available</h2>
+}
+@if (Model != null)
+{
+    
+        <div class="x_title">
+            <h1>List of all Transactions</h1>
+        </div>
+        <div class="x_content">
+
+            <table class="table table-striped responsive-utilities jambo_table bulk_action">
+                <thead>
+                    <tr class="headings">
+                        <th class="column-title">
+                            Transaction ID
+                        </th>
+                        <th class="column-title">
+                            Transmitter account
+                        </th>
+                        <th class="column-title">
+                            Beneficiary account
+                        </th>
+                        <th class="column-title">
+                            Operation date
+                        </th>
+                        <th class="column-title">
+                            Value date
+                        </th>
+                        <th class="column-title">
+                            Amount
+                        </th>
+                        <th class="column-title">
+                            Status
+                        </th>
+                        <th class="column-title">
+                            Type
+                        </th>
+                        <th class="column-title">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                        <tr class="odd pointer">
+                            <td class=" ">
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td class=" ">
+                                @Html.DisplayFor(modelItem => item.TransmitterRIB)
+                            </td>
+                            <td class=" ">
+                                @Html.DisplayFor(modelItem => item.BeneficiaryRIB)
+                            </td>
+                            <td class=" ">
+                                @Html.DisplayFor(modelItem => item.OperationDate)
+                            </td>
+                            <td class=" ">
+                                @Html.DisplayFor(modelItem => item.ValueDate)
+                            </td>
+                            <td class="a-right a-right">
+                                @Html.DisplayFor(modelItem => item.Amount)
+                            </td>
+                            <td class=" ">
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td class=" ">
+                                @Html.DisplayFor(modelItem => item.Type)
+                            </td>
+                            <td>
+                                @if (item.Status== "Hold")
+                                {
+                                    <a href="@Url.Action("Delete", "Transaction",new { id = item.Id })" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash-o"></i>
+                                        Delete transaction
+                                    </a>
+                                    <a href="@Url.Action("Block", "Transaction",new { id = item.Id })" class="btn btn-dark btn-xs">
+                                        <i class="glyphicon glyphicon-ban-circle"></i>
+                                        Block transaction
+                                    </a>
+                                }
+                                else
+                                { <span>No action</span>}
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    
+}

@@ -1,0 +1,28 @@
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.csprojResolveAssemblyReference.cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.csprojResolveAssemblyReference.cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.csprojResolveAssemblyReference.cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Domain\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Domain\obj\Debug\ERP_BANK.Domain.pdb

@@ -1,0 +1,88 @@
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll.config
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.xml
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csprojResolveAssemblyReference.cache
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.dll
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.pdb
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.initial.resources
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csproj.GenerateResource.Cache
+C:\Users\mido\Documents\Visual Studio 2015\Projects\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.Ines.resources
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll.config
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.xml
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csprojResolveAssemblyReference.cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.InitialCreate.resources
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration_ines_ghassen\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csproj.GenerateResource.Cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll.config
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.xml
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csprojResolveAssemblyReference.cache
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.dll
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.pdb
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.InitialCreate.resources
+C:\Users\inesh\Documents\Visual Studio 2015\Projects\Integration\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csproj.GenerateResource.Cache
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll.config
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.xml
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csprojResolveAssemblyReference.cache
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.InitialCreate.resources
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csproj.GenerateResource.Cache
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.dll
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.pdb
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.NewPropInvoice_StateI.resources
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.addInventoryPorpsToInvoice.resources
+C:\Users\Amri\Desktop\Beta_2\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.fixInvoiceInventory.resources
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll.config
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Data.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\MySql.Data.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\ERP_BANK.Domain.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.xml
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csprojResolveAssemblyReference.cache
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.dll
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.pdb
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.Migrations.initial.resources
+C:\Users\Amri\Desktop\ERP_BANK\ERP_BANK.Data\obj\Debug\ERP_BANK.Data.csproj.GenerateResource.Cache

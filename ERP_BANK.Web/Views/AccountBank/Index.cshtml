@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    table {
+        height: 800px;
+        overflow-y: scroll;
+        overflow-x: scroll;
+        display: block;
+    }
+</style>
+
+
+<div class="x_panel">
+    <div class="x_title">
+        <h1>List of Accounts</h1>
+    </div>
+    <span>
+        <a href="@Url.Action("Create", "AccountBank")" class="btn btn-success btn-xs">
+            <i class="glyphicon glyphicon-plus"></i>
+            &nbsp;  Current Account
+        </a>
+    </span>
+
+    <span>
+        <a href="@Url.Action("CreateBlocked", "AccountBank")" class="btn btn-success btn-xs">
+            <i class="glyphicon glyphicon-plus"></i>
+            &nbsp;  Blocked Account
+        </a>
+    </span>
+
+    <span>
+        <a href="@Url.Action("CreateSaving", "AccountBank")" class="btn btn-success btn-xs">
+            <i class="glyphicon glyphicon-plus"></i>
+            &nbsp; Saving Account
+        </a>
+    </span>
+    <div class="x_content">
+
+        <table class="table table-striped responsive-utilities jambo_table">
+            <thead>
+                <tr class="headings">
+                    <th>
+                        Type 
+                    </th>
+                    <th>
+                        Fist Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Cin
+                    </th>
+                    <th>
+                        Balance
+                    </th>
+                    
+                    <th>
+                        Libelle
+                    </th>
+                    <th>
+                        Currency
+                    </th>
+                    <th>
+                        Note
+                    </th>
+                    <th>
+                        Salary
+                    </th>
+                    <th>
+                        Blocked
+                    </th>
+                    <th>
+                        Date Of Deblocked
+                    </th>
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @ViewBag.accounts)
+                {
+                    
+
+                    <tr>
+                        <td>
+                            
+                            @item["Type"]
+                        </td>
+                        <td>
+                            @item["First Name"]
+                        </td>
+                        <td>
+                            @item["Last Name"]
+                        </td>
+                        <td>
+                            @item["Cin"]
+                        </td>
+                        <td>
+                            @item["Account Balance"]
+                        </td>
+                        
+                        <td>
+                            @item["Libelle"]
+                        </td>
+                        <td>
+                            @item["Currency"]
+                        </td>
+                        <td>
+                            @item["Note"]
+                        </td>
+                        <td>
+                            @item["Salary"]
+                        </td>
+                        <td>
+                            @item["Blocked"]
+                        </td>
+
+                        <td>
+                            @item["Date Deblocked"]
+                        </td>
+                        <td>
+                            <span>
+                                <a href="@Url.Action("Edit", "AccountBank", new { id=item["Id"] })" class="btn btn-info btn-xs">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                    &nbsp; Edit
+                                </a>
+                            </span>
+                            <span>
+                                <a href="@Url.Action("Details", "AccountBank", new { id=item["Id"] })" class="btn btn-success btn-xs">
+                                    <i class="glyphicon glyphicon-align-left"></i>
+                                    &nbsp; Details
+                                </a>
+                            </span>
+                            <br />
+                            <span>
+                                <a href="@Url.Action("Delete", "AccountBank", new { id=item["Id"] })" class="btn btn-danger btn-xs">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                    &nbsp; Delete
+                                </a>
+                            </span>
+                            <span>
+                                <a href="@Url.Action("PDF", "AccountBank", new { id=item["Id"] })" class="btn btn-success btn-xs">
+                                    <i class="glyphicon glyphicon-download-alt"></i>
+                                    &nbsp; PDF
+                                </a>
+                            </span>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

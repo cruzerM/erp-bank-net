@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ERP_BANK.Domain.Entities.loan_join_account>
+
+@{
+    ViewBag.Title = "PayBackLog";
+}
+
+<style>
+    table {
+        height: 400px;
+        overflow-y: scroll;
+        display: block;
+    }
+</style>
+
+<h2>Transfer Log</h2>
+
+<div class="x_title"></div>
+<div class="x_content">
+
+    <table class="table table-striped responsive-utilities jambo_table">
+        <thead>
+            <tr class="headings">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FK_loan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FK_account)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.loan.RestAmount)
+                </th>
+                <th>
+                    Account Balance
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FK_loan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.account.Libelle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.loan.RestAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.account.AccountBalance)
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+<span>
+    <a href="@Url.Action("Details", "Loan", new { id =  ViewBag.LoanId})" class="btn btn-danger btn-xs">
+        <i class="fa fa-arrow-circle-left"></i>
+        Back
+    </a>
+</span>

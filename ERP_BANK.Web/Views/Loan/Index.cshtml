@@ -1,0 +1,116 @@
+﻿@model IEnumerable<ERP_BANK.Domain.Entities.loan>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    table {
+        height: 400px;
+        overflow-y: scroll;
+        display: block;
+    }
+</style>
+<h1>Manage Loans</h1>
+<div class="title_left">
+    <span>
+        <a href="@Url.Action("Create", "Loan")" class="btn btn-success">
+            <i class="glyphicon glyphicon-edit"></i>
+            New loan
+        </a>
+    </span>
+</div>
+<div class="title_right">
+    @using (Html.BeginForm())
+    {
+
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+            <div class="input-group">
+                @Html.TextBox("SearchString", null, htmlAttributes: new { @class = "form-control" })
+
+                <span class="input-group-btn">
+                    <button type="submit" value="Go !" id="submit" class="btn btn-default">Go !</button>
+                </span>
+            </div>
+        </div>
+
+    }
+</div>
+
+<div class="x_title"></div>
+<div class="x_content">
+    <table class="table table-striped responsive-utilities jambo_table">
+        <thead>
+            <tr class="headings">
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Period)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AmountWithInterest)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdAccount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsPayed)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Type)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Period)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AmountWithInterest)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.account.Libelle)
+                        </td>
+                        <td>
+                            @if ((bool)item.IsPayed)
+                            {<text>Yes</text>}
+                            else
+                            {<text>No</text>}
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Details", "Loan", new { id = item.Id })" class="btn btn-warning btn-xs">
+                                <i class="fa fa-list"></i>
+                                Details
+                            </a>
+                            <a href="@Url.Action("PayBack", "Loan", new { id = item.Id })" class="btn btn-danger btn-xs">
+                                <i class="fa fa-usd"></i>
+                                Start Transfer
+                            </a>
+                            <a href="@Url.Action("PayBackLog", "Loan", new { id = item.Id })" class="btn btn-primary btn-xs">
+                                <i class="fa fa-calculator"></i>
+                                View Transfer Log
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+            <tr>No data available</tr>
+            }
+        </tbody>
+
+    </table>
+</div>

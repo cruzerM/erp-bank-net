@@ -1,0 +1,98 @@
+﻿
+@model ERP_BANK.Domain.Entities.invoice
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="title_left clearfix">
+    <h3>Edit Invoice</h3>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+      <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+       
+
+
+ 
+
+        <div class="form-group" name="InvoiceType">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="owner">
+                Type
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+
+                @Html.DropDownListFor(model => model.InvoiceType, new SelectList(new[] { "In", "Out" }))
+                @Html.ValidationMessageFor(model => model.InvoiceType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group"name="InvoiceOwner">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                Owner
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                @Html.EditorFor(model => model.InvoiceOwner, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InvoiceOwner, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group"  name="InvoiceDescription">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                Description
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                @Html.EditorFor(model => model.InvoiceDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InvoiceDescription, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+
+        <div class="form-group" name="InvoicePrice">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                Price
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                @Html.EditorFor(model => model.InvoicePrice, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InvoicePrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+
+
+
+      s
+
+        <div class="form-group">
+            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                <input type="submit" value="Save" class="btn btn-success" />
+
+            </div>
+        </div>
+
+
+    </div>
+}
+
+<div>
+    <a href="@Url.Action("Index", "Invoice")" class="btn btn-danger btn-xs">
+        <i class="fa fa-arrow-circle-left"></i>
+        Back to List
+    </a>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,79 @@
+﻿@model ERP_BANK.Web.Models.TransactionViewModel
+@{
+    ViewBag.Title = "ERP Bank";
+}
+
+<span>
+    <a href="@Url.Action("Index", "Transaction")" class="btn btn-success">
+        Back to transactions list
+    </a>
+</span>
+<div class="x_title">
+    <h1>Are you sure you want to delete this transaction?</h1>
+    </div>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TransmitterRIB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TransmitterRIB)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BeneficiaryRIB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BeneficiaryRIB)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OperationDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OperationDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ValueDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ValueDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Amount)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" />
+            </div>
+        }
+    </div>

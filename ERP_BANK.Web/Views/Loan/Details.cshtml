@@ -1,0 +1,137 @@
+﻿@model ERP_BANK.Domain.Entities.loan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Period)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Period)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyPayment)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Warranty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Warranty)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InterestRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InterestRate)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountWithInterest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountWithInterest)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RestAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RestAmount)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAccount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.account.Libelle)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPayed)
+        </dt>
+
+        <dd>
+            @if ((bool)Model.IsPayed)
+            {<text>Yes</text>}
+            else
+            {<text>No</text>}
+        </dd>
+        <br />
+
+    </dl>
+</div>
+<span>
+    <a href="@Url.Action("CalculateAmountWithInterest", "Loan", new { id = Model.Id })" class="btn btn-primary btn-xs">
+        <i class="fa fa-calculator"></i>
+        Calculate amount with interest
+    </a>
+    @if (Model.AmountWithInterest == 0)
+    {
+        <a class="btn btn-default btn-xs" >
+            <i class="fa fa-calculator"></i>
+            Calculate monthly payment
+        </a>
+    }
+    else
+    {
+        <a href="@Url.Action("CalculateMonthlyPayment", "Loan", new { id = Model.Id })" class="btn btn-primary btn-xs">
+            <i class="fa fa-calculator"></i>
+            Calculate monthly payment
+        </a>
+    }
+
+    <a href="@Url.Action("PayBackLog", "Loan", new { id = Model.Id })" class="btn btn-warning btn-xs">
+        <i class="fa fa-calculator"></i>
+        View Transfer Log
+    </a>
+    <a href="@Url.Action("Index", "Loan")" class="btn btn-danger btn-xs">
+        <i class="fa fa-arrow-circle-left"></i>
+        Back to List
+    </a>
+</span>
+
+

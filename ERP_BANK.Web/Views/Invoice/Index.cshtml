@@ -1,0 +1,141 @@
+﻿
+@model IEnumerable<ERP_BANK.Domain.Entities.invoice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="@Url.Content("~/Content/css/pdfInvoice.css")" type="text/css" rel="stylesheet" />
+<style>
+    table {
+        height: 400px;
+        overflow-y: scroll;
+        display: block;
+    }
+</style>
+
+
+<span>
+    <a href="@Url.Action("Create", "Invoice")" class="btn btn-primary">
+        <i class="fa fa-folder"></i>
+        Create New
+
+    </a>
+
+    <a href="@Url.Action("InvIn", "Invoice")" class="btn btn-primary">
+        <i class="fa fa-4x"></i>
+        View List Invoices In
+
+    </a>
+    <a href="@Url.Action("InvOut", "Invoice")" class="btn btn-primary">
+        <i class="fa fa-4x"></i>
+        View List Invoices Out
+
+    </a>
+
+  
+   
+
+</span>
+
+
+
+
+
+
+@if (Model != null)
+
+{  <div class="x_title">
+        <h1>List Invoices</h1>
+    </div>
+    <div class="x_content">
+
+        <table class="table table-striped responsive-utilities jambo_table">
+            <thead>
+
+               
+                    <tr class="headings">
+                        <th>
+                            Id
+                        <th>
+                            Invoice Date
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Owner
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Direction
+                        </th>
+                        <th></th>
+                    </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdInvoice)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceOwner)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoicePrice) $
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PK_InvoiceDirection)
+                           
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Invoice",new { id = item.IdInvoice })" class="btn btn-success btn-xs">
+                                <i class="glyphicon glyphicon-edit"></i>
+                                Edit
+                            </a>
+
+                            <a href="@Url.Action("Delete", "Invoice",new { id = item.IdInvoice })" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash-o"></i>
+                                Delete
+                            </a>
+                            <a href="@Url.Action("View", "Invoice",new { id = item.IdInvoice })" class="btn btn-primary btn-xs">
+                                <i class="glyphicon glyphicon-adjust"></i>
+                                View
+                            </a>
+
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+}
+@if (Model == null)
+{
+    <hr />
+    <h2>No Invoices are available</h2>
+}
+@*
+    <a href="@Url.Action("ExportPdf","Invoice")" class="animate accordion bg-orange">
+        <i class="glyphicon glyphicon-adjust"></i>
+        Export PDF
+    </a>
+*@

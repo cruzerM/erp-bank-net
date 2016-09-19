@@ -1,0 +1,146 @@
+﻿@model ERP_BANK.Web.Models.TransactionViewModel
+@{
+    ViewBag.Title = "ERP Bank";
+}
+
+
+
+
+<span>
+    <a href="@Url.Action("Index", "Transaction")" class="btn btn-success">
+        Back to transactions list
+    </a>
+</span>
+
+@{
+    List<SelectListItem> listTypeItems = new List<SelectListItem>();
+    
+    listTypeItems.Add(new SelectListItem
+    {
+        Text = "Transfer",
+        Value = "Transfer"
+    });
+    listTypeItems.Add(new SelectListItem
+    {
+        Text = "Payment",
+        Value = "Payment"
+    });
+    listTypeItems.Add(new SelectListItem
+    {
+        Text = "Card",
+        Value = "Card"
+    });
+    listTypeItems.Add(new SelectListItem
+    {
+        Text = "Cheque",
+        Value = "Cheque"
+    });
+    listTypeItems.Add(new SelectListItem
+    {
+        Text = "Withdrawal",
+        Value = "Withdrawal"
+    });
+}
+
+<div class="x_title">
+    <h1>Create a Transaction</h1>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Type, listTypeItems, htmlAttributes: new { @onchange = "jsFunction()" })
+                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TransmitterRIB, htmlAttributes: new { @class = "control-label col-md-2", @id = "TransmitterRIBlb" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TransmitterRIB, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                    @Html.ValidationMessageFor(model => model.TransmitterRIB, "", new { @class = "text-danger" })
+                  
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BeneficiaryRIB, htmlAttributes: new { @class = "control-label col-md-2", @id = "BeneficiaryRIBlb" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BeneficiaryRIB, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                    @Html.ValidationMessageFor(model => model.BeneficiaryRIB, "", new { @class = "text-danger" })
+                </div>
+                
+            </div>
+            
+
+            
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <script>
+                function jsFunction() {
+                    var myselect = document.getElementById("Type");
+
+                    if (myselect.options[myselect.selectedIndex].value == "Transfer" || myselect.options[myselect.selectedIndex].value == "Cheque") {
+                        document.getElementById('TransmitterRIB').style.display = 'block';
+                        document.getElementById('BeneficiaryRIB').style.display = 'block';
+                        document.getElementById('TransmitterRIBlb').style.display = 'block';
+                        document.getElementById('BeneficiaryRIBlb').style.display = 'block';
+                    }
+
+                    if (myselect.options[myselect.selectedIndex].value == "Payment") {
+                        document.getElementById('TransmitterRIB').style.display = 'none';
+                        document.getElementById('BeneficiaryRIB').style.display = 'block';
+                        document.getElementById('TransmitterRIBlb').style.display = 'none';
+                        document.getElementById('BeneficiaryRIBlb').style.display = 'block';
+                    }
+
+                    if (myselect.options[myselect.selectedIndex].value == "Card" || myselect.options[myselect.selectedIndex].value == "Withdrawal") {
+                        document.getElementById('TransmitterRIB').style.display = 'block';
+                        document.getElementById('BeneficiaryRIB').style.display = 'none';
+                        document.getElementById('TransmitterRIBlb').style.display = 'block';
+                        document.getElementById('BeneficiaryRIBlb').style.display = 'none';
+                    }
+                    
+                }
+            </script>
+           
+            
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+
+            @if (ViewBag.TransactionError != null)
+            {
+
+                <h1>@ViewBag.TransactionError</h1>
+                <script>
+                        jsFunction();
+                </script>
+            }
+        </div>
+    }
+
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+

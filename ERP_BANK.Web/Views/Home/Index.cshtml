@@ -1,0 +1,939 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<!-- page content -->
+<!-- top tiles -->
+<div class="row tile_count">
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-money"></i> Total Accounts</span>
+            <div class="count">@ViewBag.PercentageAccounts["accounts"]</div>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-usd"></i> Total Loans</span>
+            <div class="count">@ViewBag.totalLoans</div>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-exchange"></i> Total Transactions</span>
+            <div class="count">@ViewBag.PercentageTransactions["transactions"]</div>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-list-alt"></i> Total Invoices</span>
+            <div class="count">@ViewBag.PercentageInvoices["invoices"]</div>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-line-chart"></i> Total Shares</span>
+            <div class="count">@ViewBag.PercentageShares["shares"]</div>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-user"></i> Total Brokers</span>
+            <div class="count">@ViewBag.PercentageBrokers["brokers"]</div>
+        </div>
+    </div>
+
+</div>
+<!-- /top tiles -->
+
+<br />
+<div class="row">
+
+    <!-- Transactions Types Pie Chart -->
+
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Shares Currencies</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                @if (ViewBag.PercentageShares["shares"] != 0)
+                {
+                    <div id="echart_pie2" style="height:350px;"></div>
+                }
+                else
+                {
+                    <h1 class="text-center">No Data</h1>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Brokers Currencies</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                @if (ViewBag.PercentageBrokers["brokers"] != 0)
+                {
+                    <div id="echart_pie3" style="height:350px;"></div>
+                }
+                else
+                {
+                    <h1 class="text-center">No Data</h1>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+
+    <!-- Transactions Types Pie Chart -->
+
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Transaction Types</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                @if (ViewBag.PercentageTransactions["transactions"] != 0)
+                {
+                    <div id="echart_pie" style="height:350px;"></div>
+                }
+                else
+                {
+                    <h1 class="text-center">No Data</h1>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel tile fixed_height_320 overflow_hidden">
+            <div class="x_title">
+                <h2>Accounts Types</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+                <table class="" style="width:100%">
+                    <tr>
+                        <th style="width:37%;">
+
+                        </th>
+                        <th>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                <p class="">Account</p>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                <p style="text-align:right">#</p>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+
+                        @if (@ViewBag.PercentageAccounts["accounts"] != 0)
+                        {
+                            <td>
+                                <canvas id="canvas1" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                            </td>
+                            <td>
+                                <table class="tile_info">
+                                    <tr>
+                                        <td>
+                                            <p><i class="fa fa-square blue"></i>Current </p>
+                                        </td>
+                                        <td>@ViewBag.PercentageAccounts["current"]%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><i class="fa fa-square green"></i>Saving </p>
+                                        </td>
+                                        <td>@ViewBag.PercentageAccounts["blocked"]%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><i class="fa fa-square purple"></i>Blocked </p>
+                                        </td>
+                                        <td>@ViewBag.PercentageAccounts["saving"]%</td>
+                                    </tr>
+
+                                </table>
+                            </td>
+
+                        }
+                        else
+                        {
+                            <td><h1 class="text-center">No Data</h1></td>
+                        }
+
+
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="x_panel tile">
+            <div class="x_title">
+                <h2>Manage Accounts</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="dashboard-widget-content">
+                    <ul class="quick-list" style="width:100%">
+                        <li>
+                            <i class="fa fa-plus-square" style="color:#1ABB9C"></i>
+                            @Html.ActionLink("Add new Account", "Create", "AccountBank")
+                        </li>
+                        <li>
+                            @if (ViewBag.idLastAccount == null)
+                            {
+                                <div style="pointer-events:none;opacity:0.6">
+                                    <i class="fa fa-line-chart"></i>
+                                    Review last Account
+                                </div>
+                            }
+                            else
+                            {
+
+                                <i class="fa fa-line-chart"></i>
+                         
+                                <a href="@Url.Action("Details", "AccountBank", new { id = ViewBag.idLastAccount })" class="">
+                                    Review last Account
+                                </a>
+                            }
+                        </li>
+                        <li>
+                            @if (ViewBag.idLastAccount == null)
+                            {
+                                <div style="pointer-events:none;opacity:0.6">
+                                    <i class="fa fa-bars"></i>
+                                    All Accounts
+                                </div>
+                            }
+                            else
+                            {
+                                <i class="fa fa-bars"></i>
+                                @Html.ActionLink("All Accounts", "Index", "AccountBank")
+                            }
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="x_panel tile">
+            <div class="x_title">
+                <h2>Manage Transactions</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="dashboard-widget-content">
+                    <ul class="quick-list" style="width:100%">
+                        <li>
+                            <i class="fa fa-plus-square" style="color:#1ABB9C"></i>
+                            @Html.ActionLink("Add new Transaction", "Create", "Transaction")
+                        </li>
+                        <li>
+                            @if (ViewBag.idLastTransaction == null)
+                            {
+                                <div style="pointer-events:none;opacity:0.6">
+                                    <i class="fa fa-line-chart"></i>
+                                    Review last Transaction
+                                </div>
+                            }
+                            else
+                            {
+                                <i class="fa fa-line-chart"></i>
+                                
+                                <a href="@Url.Action("Details", "Transaction", new { id = ViewBag.idLastTransaction })" class="">
+                                    Review last Transaction
+                                </a>
+                            }
+
+                        </li>
+                        <li>
+                            @if (ViewBag.idLastTransaction == null)
+                            {
+                                <div style="pointer-events:none;opacity:0.6">
+                                    <i class="fa fa-bars"></i>
+                                    All Transactions
+                                </div>
+                            }
+                            else
+                            {
+                                <i class="fa fa-bars"></i>
+                                @Html.ActionLink("All Transactions", "Index", "Transaction")
+                            }
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="x_panel tile">
+            <div class="x_title">
+                <h2>Manage Loans</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="dashboard-widget-content">
+                    <ul class="quick-list" style="width:100%">
+                        <li>
+                            <i class="fa fa-plus-square" style="color:#1ABB9C"></i>
+                            @Html.ActionLink("Add new Loan", "Create", "Loan")
+                        </li>
+                        <li>
+                            @if (ViewBag.idLastLoan == null)
+                            {
+                                <div style="pointer-events:none;opacity:0.6">
+                                    <i class="fa fa-line-chart"></i>
+                                    Review last Loan
+                                </div>
+                            }
+                            else
+                            {
+                                <i class="fa fa-line-chart"></i>
+                                <a href="@Url.Action("Details", "Loan", new { id = ViewBag.idLastLoan })" class="">
+                                    Review last Loan
+                                </a>
+                            }
+
+                        </li>
+                        <li>
+                            @if (ViewBag.idLastLoan == null)
+                            {
+                                <div style="pointer-events:none;opacity:0.6">
+                                    <i class="fa fa-bars"></i>
+                                    All Loans
+                                </div>
+                            }
+                            else
+                            {
+                                <i class="fa fa-bars"></i>
+                                @Html.ActionLink("All Loans", "Index", "Loan")
+                            }
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Invoices Types</h2>
+               
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                @if (ViewBag.PercentageInvoices["invoices"] != 0)
+                {
+                    <div id="echart_pie1" style="height:350px;"></div>
+                }
+                else
+                {
+                    <h1 class="text-center">No Data</h1>
+                }
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Recent activities Accounts -->
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Recent Activities <small>Accounts</small></h2>
+                <ul class="nav navbar-right panel_toolbox" style="min-width:30px">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+@if (ViewBag.PercentageAccounts["accounts"] >= 3)
+{
+                <div class="dashboard-widget-content">
+
+                    <ul class="list-unstyled timeline widget">
+
+
+                        <li>
+                            <div class="block">
+                                <div class="block_content">
+                                    <h2 class="title">
+                                        Account Creation
+                                    </h2>
+                                    <p class="excerpt">
+                                        <ul>
+                                            <li>Customer Name &nbsp;<span id="#cus_account1" style="color:black"></span></li>
+                                            <li>Account ID &nbsp;<span id="#accID_account1" style="color:black"></span></li>
+                                            <li>Amount &nbsp;<span id="#amount_account1" style="color:black"></span></li>
+                                        </ul>
+                                       
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="block">
+                                <div class="block_content">
+                                    <h2 class="title">
+                                        Account Creation
+                                    </h2>
+                                   
+                                    <p class="excerpt">
+                                        <ul>
+                                            <li>Customer Name &nbsp;<span id="#cus_account2" style="color:black"></span></li>
+                                            <li>Account ID &nbsp;<span id="#accID_account2" style="color:black"></span></li>
+                                            <li>Amount &nbsp;<span id="#amount_account2" style="color:black"></span></li>
+                                        </ul>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="block">
+                                <div class="block_content">
+                                    <h2 class="title">
+                                        Account Creation
+                                    </h2>
+                                    <p class="excerpt">
+                                        <ul>
+                                            <li>Customer Name &nbsp;<span id="#cus_account3" style="color:black"></span></li>
+                                            <li>Account ID &nbsp;<span id="#accID_account3" style="color:black"></span></li>
+                                            <li>Amount &nbsp;<span id="#amount_account3" style="color:black"></span></li>
+                                        </ul>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+}
+else
+{
+    <h1 class="text-center">Not Enough Data</h1>
+}
+            </div>
+        </div>
+    </div>
+    <!-- -->
+</div>
+
+<footer>
+    <div class="">
+        <p class="pull-right">
+            © 2015 ABCD. All rights reserved.
+        </p>
+    </div>
+    <div class="clearfix"></div>
+</footer>
+
+<script>
+    $(function(){
+
+        $(document).ready(function worker() {
+            $.ajax({
+                url: '@Url.Action("getRecentAccounts", "Home")',
+                context: document.body,
+                error: errorFunc
+            }).done(function(serverdata) {
+                data = serverdata;
+
+
+                //$.each(data, function( index, value ) {
+                //    $.each(value, function( index2, value2 ) {
+                //        alert( index + ": " + value );
+                //    });
+                //});
+                //alert(data[0][0]);
+                document.getElementById("#cus_account1").innerHTML = data[0][0];
+                document.getElementById("#accID_account1").innerHTML = data[0][1];
+                document.getElementById("#amount_account1").innerHTML = data[0][2];
+
+
+                document.getElementById("#cus_account2").innerHTML = data[1][0];
+                document.getElementById("#accID_account2").innerHTML = data[1][1];
+                document.getElementById("#amount_account2").innerHTML = data[1][2];
+
+                document.getElementById("#cus_account3").innerHTML = data[2][0];
+                document.getElementById("#accID_account3").innerHTML = data[2][1];
+                document.getElementById("#amount_account3").innerHTML = data[2][2];
+
+
+                setTimeout(worker ,60000);
+
+            });
+            function errorFunc() {
+                alert('error');
+            }
+        });
+    });
+
+</script>
+
+@if (ViewBag.PercentageAccounts["accounts"] != 0)
+{
+    @section canvas1Script{
+
+        <!-- dashbord linegraph -->
+        <script>
+            var doughnutData = [
+                {
+                    value: @ViewBag.PercentageAccounts["current"],
+                    color: "#3498DB"
+                },
+                {
+                    value: @ViewBag.PercentageAccounts["blocked"],
+                    color: "#1ABB9C"
+                },
+                {
+                    value: @ViewBag.PercentageAccounts["saving"],
+                    color: "#9B59B6"
+                }
+            ];
+            var myDoughnut = new Chart(document.getElementById("canvas1").getContext("2d")).Doughnut(doughnutData);
+        </script>
+        <!-- /dashbord linegraph -->
+    }
+}
+@if (ViewBag.PercentageTransactions["transactions"] != 0)
+{
+    @section pieChartScript1{
+
+        <!-- dashbord linegraph -->
+        <script>
+            // Transactions Types Pie Chart
+
+            var myChart = echarts.init(document.getElementById('echart_pie'), theme);
+            myChart.setOption({
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    //orient: 'vertical',
+                    //x: 'left',
+                    x: 'center',
+                    y: 'bottom',
+                    data: ['Transfer', 'Payment', 'Card', 'Cheque', 'Withdrawal']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        magicType: {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                calculable: false,
+                series: [
+                    {
+                        name: 'Transactions',
+                        type: 'pie',
+                        radius: '55%',
+                        center: ['50%', '48%'], //left,top
+                        data: [
+                            {
+                                value: @ViewBag.PercentageTransactions["transer"],
+                                name: 'Transfer'
+                            },
+                            {
+                                value: @ViewBag.PercentageTransactions["payement"],
+                                name: 'Payment'
+                            },
+                            {
+                                value: @ViewBag.PercentageTransactions["card"],
+                                name: 'Card'
+                            },
+                            {
+                                value: @ViewBag.PercentageTransactions["cheque"],
+                                name: 'Cheque'
+                            },
+                            {
+                                value: @ViewBag.PercentageTransactions["withdrawal"],
+                                name: 'Withdrawal'
+                            }
+                        ]
+                    }
+                ]
+            });
+
+
+            var dataStyle = {
+                normal: {
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                }
+            };
+            var placeHolderStyle = {
+                normal: {
+                    color: 'rgba(0,0,0,0)',
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                },
+                emphasis: {
+                    color: 'rgba(0,0,0,0)'
+                }
+            };
+        </script>
+    }
+}
+@if (ViewBag.PercentageInvoices["invoices"] != 0)
+{
+    @section pieChartScript2{
+        <script>
+            // Invoices Types Pie Chart
+
+            var myChart = echarts.init(document.getElementById('echart_pie1'), theme);
+            myChart.setOption({
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    //orient: 'vertical',
+                    //x: 'left',
+                    x: 'center',
+                    y: 'bottom',
+                    data: ['IN', 'OUT']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        magicType: {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                calculable: false,
+                series: [
+                    {
+                        name: 'Invoices',
+                        type: 'funnel',
+                        radius: '55%',
+                        center: ['50%', '48%'], //left,top
+                        data: [
+                            {
+                                value: @ViewBag.PercentageInvoices["invoicesIn"],
+                                name: 'IN'
+                            },
+                            {
+                                value: @ViewBag.PercentageInvoices["invoicesOut"],
+                                name: 'OUT'
+                            }
+                        ]
+                    }
+                ]
+            });
+
+
+            var dataStyle = {
+                normal: {
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                }
+            };
+            var placeHolderStyle = {
+                normal: {
+                    color: 'rgba(0,0,0,0)',
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                },
+                emphasis: {
+                    color: 'rgba(0,0,0,0)'
+                }
+            };
+        </script>
+        <!-- /dashbord linegraph -->
+    }
+
+}
+
+@if (ViewBag.PercentageShares["shares"] != 0)
+{
+        <script>
+            // Shares Types Pie Chart
+
+            var myChart = echarts.init(document.getElementById('echart_pie2'), theme);
+            myChart.setOption({
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    //orient: 'vertical',
+                    //x: 'left',
+                    x: 'center',
+                    y: 'bottom',
+                    data: ['USD', 'EUR', 'TND']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        magicType: {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                calculable: false,
+                series: [
+                    {
+                        name: 'Shares',
+                        type: 'pie',
+                        radius: '55%',
+                        center: ['50%', '48%'], //left,top
+                        data: [
+                            {
+                                value: @ViewBag.PercentageShares["usd"],
+                                name: 'USD'
+                            },
+                            {
+                                value: @ViewBag.PercentageShares["eur"],
+                                name: 'EUR'
+                            },
+                            {
+                                value: @ViewBag.PercentageShares["tnd"],
+                                name: 'TND'
+                            }
+                        ]
+                    }
+                ]
+            });
+
+
+            var dataStyle = {
+                normal: {
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                }
+            };
+            var placeHolderStyle = {
+                normal: {
+                    color: 'rgba(0,0,0,0)',
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                },
+                emphasis: {
+                    color: 'rgba(0,0,0,0)'
+                }
+            };
+        </script>
+        <!-- /dashbord linegraph -->
+    
+
+}
+
+@if (ViewBag.PercentageBrokers["brokers"] != 0)
+{
+    <script>
+            // Shares Types Pie Chart
+
+            var myChart = echarts.init(document.getElementById('echart_pie3'), theme);
+            myChart.setOption({
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    //orient: 'vertical',
+                    //x: 'left',
+                    x: 'center',
+                    y: 'bottom',
+                    data: ['USD', 'EUR', 'TND']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        magicType: {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                calculable: false,
+                series: [
+                    {
+                        name: 'Brokers',
+                        type: 'pie',
+                        radius: '55%',
+                        center: ['50%', '48%'], //left,top
+                        data: [
+                            {
+                                value: @ViewBag.PercentageBrokers["usd"],
+                                name: 'USD'
+                            },
+                            {
+                                value: @ViewBag.PercentageBrokers["eur"],
+                                name: 'EUR'
+                            },
+                            {
+                                value: @ViewBag.PercentageBrokers["tnd"],
+                                name: 'TND'
+                            }
+                        ]
+                    }
+                ]
+            });
+
+
+            var dataStyle = {
+                normal: {
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                }
+            };
+            var placeHolderStyle = {
+                normal: {
+                    color: 'rgba(0,0,0,0)',
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                },
+                emphasis: {
+                    color: 'rgba(0,0,0,0)'
+                }
+            };
+    </script>
+        <!-- /dashbord linegraph -->
+
+
+}

@@ -1,0 +1,52 @@
+﻿@model ERP_BANK.Domain.Entities.invoice
+
+@{
+    ViewBag.Title = "View";
+}
+
+
+<link href="@Url.Content("~/Content/css/pdfInvoice.css")" type="text/css" rel="stylesheet" />
+<table><tr>
+    <td><img src="~/Content/Picture/bank-gray-md.png" /></td>
+    <td>
+        <h5>Contact</h5>
+        <h6>Address: </h6><h5>13,wolfStreett, XXXXXXX,IL 65801,New York,USA 2064</h5>
+        <h6>Tel: </h6><h5>+216 55 653785</h5>
+        <h6>Mail: </h6><h5>Euro.Bank@gmail.com</h5>
+
+
+
+    </td>
+    </tr></table>
+
+
+
+<br />
+
+<h3>Invoice N° :@Html.DisplayFor(modelItem => Model.IdInvoice)</h3>
+<h4>In: @Html.DisplayFor(modelItem => Model.InvoiceDate)</h4>
+<hr />
+<br />
+    <h4>From : </h4> <h5>@Html.DisplayFor(modelItem => Model.InvoiceOwner)</h5>
+             
+   <h4>Description:</h4>  <h6>@Html.DisplayFor(modelItem => Model.InvoiceDescription)</h6>
+                  
+                  <br />
+    <hr />   <h3>Price</h3> <h5>@Html.DisplayFor(modelItem => Model.InvoicePrice)  $</h5>
+
+
+
+
+
+<div>
+    <a href="@Url.Action("Index", "Invoice")" class="btn btn-danger btn-xs">
+        <i class="fa fa-arrow-circle-left"></i>
+        Back to List
+    </a>
+</div>
+<br />
+
+<a href="@Url.Action("ExportPdf2","Invoice", new { id = Model.IdInvoice })">Export Pdf </a>
+
+
+

@@ -1,0 +1,69 @@
+﻿@model ERP_BANK.Domain.Entities.direction
+
+@{
+    ViewBag.Title = "Create";
+}
+<div class="title_left clearfix">
+    <h3>Create Direction</h3>
+</div>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="date">
+                Name
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                @Html.EditorFor(model => model.DirectionName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DirectionName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="date">
+                Type
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                @Html.DropDownListFor(model => model.DirectionType, new SelectList(new[] { "Finance", "Human Ressource", "Marketing", "Information and system security" }))
+                @Html.ValidationMessageFor(model => model.DirectionType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="date">
+                Budget
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                @Html.EditorFor(model => model.DirectionBudget, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DirectionBudget, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                <input type="submit" value="Create" class="btn btn-success" />
+
+            </div>
+        </div>
+
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

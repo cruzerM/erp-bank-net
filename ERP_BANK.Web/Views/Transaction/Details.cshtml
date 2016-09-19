@@ -1,0 +1,81 @@
+﻿@model ERP_BANK.Web.Models.TransactionViewModel
+@{
+    ViewBag.Title = "ERP Bank";
+}
+<span>
+    <a href="@Url.Action("Index", "Transaction")" class="btn btn-success">
+        Back to transactions list
+    </a>
+</span>
+<div class="x_title">
+    <h2>Detail of transaction</h2>
+    </div>
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TransmitterRIB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TransmitterRIB)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BeneficiaryRIB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BeneficiaryRIB)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OperationDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OperationDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ValueDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ValueDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Amount)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+        </dl>
+    </div>
+<span>
+    <a href="@Url.Action("Edit", "Transaction", new { id = Model.Id })" class="btn btn-success">
+       Edit this transaction
+    </a>
+</span>
+

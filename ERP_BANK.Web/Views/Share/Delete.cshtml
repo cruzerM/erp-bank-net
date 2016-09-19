@@ -1,0 +1,91 @@
+﻿@model ERP_BANK.Domain.Entities.share
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>share</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idshare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idshare)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currency1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currency1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currency2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currency2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.amountInvested)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.amountInvested)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfPurchase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfPurchase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfSale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idBroker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idBroker)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a href="@Url.Action("Index", "Share")" class="btn btn-danger btn-xs">
+                <i class="fa fa-arrow-circle-left"></i>
+                Back to List
+            </a>
+        </div>
+    }
+</div>
